@@ -96,7 +96,7 @@ static const char WWFoldStateKey = '\0';
     
     @try {
         //防止crash
-        [self reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationFade];
+        [self reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
     } @catch (NSException *exception) {
         NSLog(@"%@", exception);
         [self reloadData];
