@@ -25,8 +25,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self tableView];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +34,7 @@
 
 #pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -94,7 +92,7 @@
 #pragma mark - Lazy
 - (UITableView *)tableView {
 	if(_tableView == nil) {
-		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight) style:UITableViewStyleGrouped];
+		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, KScreenWidth, KScreenHeight) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [self.view addSubview:_tableView];
